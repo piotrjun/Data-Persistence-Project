@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuUIHandler : MonoBehaviour
 {
+    public TMP_InputField input;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +31,11 @@ public class MenuUIHandler : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void EnterPlayerName()
+    {
+        DataManager.Instance.Player = input.text;
+        Debug.Log(DataManager.Instance.Player);
     }
 }
