@@ -37,6 +37,6 @@ public class MenuUIHandler : MonoBehaviour
     public void EnterPlayerName()
     {
         DataManager.Instance.Player = input.text;
-        Debug.Log(DataManager.Instance.Player);
+        //Debug.Log(DataManager.Instance.Player);
     }
 }
