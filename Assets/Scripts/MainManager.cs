@@ -88,7 +88,7 @@ public class MainManager : MonoBehaviour
             DataManager.Instance.highScore = m_Points;
             DataManager.Instance.highScorePlayer = DataManager.Instance.Player;
             DataManager.Instance.SaveHighScore();
-            Debug.Log("highscore saved");
+            //Debug.Log("highscore saved");
         }
     }
 }
