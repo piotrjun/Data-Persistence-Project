@@ -75,10 +75,20 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        SetNewHighScore();
     }
 
     public void ShowHighScore()
     {
         highScoreText.text = $"Best Score : {DataManager.Instance.highScorePlayer} : {DataManager.Instance.highScore}";
+    }
+
+    private void SetNewHighScore()
+    {
+        if (m_Points > DataManager.Instance.highScore)
+        {
+            DataManager.Instance.highScore = m_Points;
+            DataManager.Instance.highScorePlayer = DataManager.Instance.Player;
+        }
     }
 }
